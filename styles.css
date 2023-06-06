@@ -12,11 +12,14 @@ form {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* prevent the items from wrapping */
     justify-content: flex-start; /* aligns items to the start (left side) */
+    align-items: flex-start; /* aligns items to the top */
+    overflow: auto; /* adds a scrollbar if the content overflows */
 }
 
 .form-results {
+    flex: 1; /* takes up remaining space */
     margin-right: 20px; /* adjust this value to your liking */
 }
 
@@ -24,8 +27,4 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#results {
-    word-wrap: break-word;
 }
