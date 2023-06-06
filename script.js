@@ -11,6 +11,7 @@ window.onload = function() {
         const L0 = parseFloat(document.getElementById('l0').value);
 
         // Calculate d1, d2, and d0
+        console.log('Calculating d1...');
         const d1 = Math.sqrt(2 * h1 * R);
         const d2 = L0 - d1;
         const d0 = d1 + d2;
@@ -19,17 +20,21 @@ window.onload = function() {
         const BOX_fraction = d2 / C;
 
         // Calculate the angle at BOX in radians
+        console.log('Calculating BOX_Angle...');
         const BOX_angle = 2 * Math.PI * BOX_fraction;
 
         // Calculate BC and OC
+        console.log('Calculating BC & OC...');
         const BC = R / Math.sin(BOX_angle);
         const OC = R / Math.cos(BOX_angle);
 
         // Calculate XC
+        console.log('Calculating XC...');
         const XC = OC - R;
 
         // Display the results
         const resultsDiv = document.getElementById('results');
+        console.log('Displaying results...');
         resultsDiv.innerHTML = `
             <p>d1: ${d1} meters</p>
             <p>d2: ${d2} meters</p>
