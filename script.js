@@ -12,23 +12,27 @@ window.onload = function() {
 
         // Calculate d1 and d2
         const d1 = Math.sqrt(2 * h1 * R);
-        const d2 = l0 - d1;
-
+        //const d2 = l0 - d1;
+        const l2 =  l0 - d1;
+        
         // Check if d2 is negative
-        if (d2 < 0) {
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `
-                <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
-            `;
-            return;
-        }
+        //if (d2 < 0) {
+        //    const resultsDiv = document.getElementById('results');
+        //    resultsDiv.innerHTML = `
+        //        <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
+        //    `;
+        //    return;
+        //}
 
         // If d2 is not negative, continue with the calculations
-        const d0 = d1 + d2;
+        //const d0 = d1 + d2;
 
         // Calculate the fraction of the Earth's circumference that BX represents
-        const BOX_fraction = d2 / C;
-
+        //const BOX_fraction = d2 / C;
+        
+        //const BOX_fraction = d2 / C;
+        const BOX_fraction = l2 / C;
+        
         // Calculate the angle at BOX in radians
         const BOX_angle = 2 * Math.PI * BOX_fraction;
 
@@ -38,14 +42,13 @@ window.onload = function() {
 
         // Calculate XC
         const XC = OC - R;
-
-        // Display the results
+        
         // Display the results
         const resultsDiv = document.getElementById('results');
         console.log('Displaying results...');
         resultsDiv.innerHTML = `
             <p>d1: ${d1.toFixed(1)} meters</p>
-            <p>d2: ${d2.toFixed(1)} meters</p>
+            <p>d2: ${BC.toFixed(1)} meters</p>
             <p>d0: ${d0.toFixed(1)} meters</p>
             <p>h2: ${XC.toFixed(1)} meters</p>
         `;
