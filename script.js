@@ -12,7 +12,7 @@ window.onload = function() {
 
         // Calculate d1 and d2
         const d1 = Math.sqrt(2 * h1 * R);
-        const d2 = L0 - d1;
+        const d2 = l0 - d1;
 
         // Check if d2 is negative
         if (d2 < 0) {
