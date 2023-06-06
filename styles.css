@@ -19,3 +19,9 @@ form {
 .form-results, .diagram {
     flex-basis: 45%;
 }
+
+.diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
