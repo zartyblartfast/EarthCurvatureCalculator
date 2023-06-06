@@ -37,9 +37,10 @@ window.onload = function() {
         const BOX_angle = 2 * Math.PI * BOX_fraction;
 
         // Calculate BC and OC
-        const BC = R / Math.sin(BOX_angle);
+        
         const OC = R / Math.cos(BOX_angle);
-
+        const BC = OC * Math.sin(BOX_angle);
+        
         // Calculate XC
         const XC = OC - R;
         const d0 = d1 + BC
