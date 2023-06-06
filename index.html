@@ -7,13 +7,23 @@
 <body>
     <h1>Earth Curvature Calculator</h1>
     <form id="calc-form">
-        <label for="h1">Observer's height above sea level (h1) in meters:</label><br>
-        <input type="number" id="h1" name="h1" min="0" required><br>
-        <label for="l0">Distance from observer to point over the horizon (L0) in meters:</label><br>
-        <input type="number" id="l0" name="l0" min="0" required><br>
+        <label for="l0">L0 Distance:</label><br>
+        <input type="text" id="l0" name="l0"><br>
+        <label for="h1">H1 Height:</label><br>
+        <input type="text" id="h1" name="h1"><br>
         <input type="submit" value="Calculate">
     </form>
     <div id="results"></div>
+
+    <!-- SVG Diagram -->
+    <svg width="500" height="500">
+        <g>
+            <path id="semi-circle" d="M 150 250 a 100 100 0 0 1 200 0" stroke="black" fill="transparent"></path>
+            <text id="textA" x="150" y="260">A</text>
+            <text id="textB" x="350" y="260">B</text>
+        </g>
+    </svg>
+
     <script src="script.js"></script>
 </body>
 </html>
