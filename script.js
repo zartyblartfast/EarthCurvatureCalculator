@@ -16,13 +16,13 @@ window.onload = function() {
         const l2 =  l0 - d1;
         
         // Check if d2 is negative
-        //if (d2 < 0) {
-        //    const resultsDiv = document.getElementById('results');
-        //    resultsDiv.innerHTML = `
-        //        <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
-        //    `;
-        //    return;
-        //}
+        if (l2 < 0) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
+            `;
+            return;
+        }
 
         // If d2 is not negative, continue with the calculations
         //const d0 = d1 + d2;
