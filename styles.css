@@ -26,3 +26,6 @@ form {
     align-items: center;
 }
 
+#results {
+    word-wrap: break-word;
+}
