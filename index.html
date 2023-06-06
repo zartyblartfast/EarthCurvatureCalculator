@@ -7,8 +7,10 @@
 <body>
     <h1>Earth Curvature Calculator</h1>
     <form id="calc-form">
-        <label for="l0">L0 Distance:</label><br>
-        <input type="text" id="l0" name="l0"><br>
+        <label for="h1">Observer's height above sea level (h1) in meters:</label><br>
+        <input type="number" id="h1" name="h1" min="0" required><br>
+        <label for="l0">Distance from observer to point over the horizon (L0) in meters:</label><br>
+        <input type="number" id="l0" name="l0" min="0" required><br>
         <input type="submit" value="Calculate">
     </form>
     <div id="results"></div>
