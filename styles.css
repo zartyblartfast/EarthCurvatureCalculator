@@ -12,13 +12,12 @@ form {
 
 .container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: flex-start; /* aligns items to the start (left side) */
 }
 
-.form-results, .diagram {
-    width: 45%;
-    box-sizing: border-box;
+.form-results {
+    margin-right: 20px; /* adjust this value to your liking */
 }
 
 .diagram {
