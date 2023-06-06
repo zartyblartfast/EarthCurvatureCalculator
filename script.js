@@ -10,28 +10,36 @@ window.onload = function() {
         const h1 = parseFloat(document.getElementById('h1').value);
         const L0 = parseFloat(document.getElementById('l0').value);
 
-        // Calculate d1, d2, and d0
-        console.log('Calculating d1...');
+        // Calculate d1 and d2
         const d1 = Math.sqrt(2 * h1 * R);
         const d2 = L0 - d1;
+
+        // Check if d2 is negative
+        if (d2 < 0) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
+            `;
+            return;
+        }
+
+        // If d2 is not negative, continue with the calculations
         const d0 = d1 + d2;
 
         // Calculate the fraction of the Earth's circumference that BX represents
         const BOX_fraction = d2 / C;
 
         // Calculate the angle at BOX in radians
-        console.log('Calculating BOX_Angle...');
         const BOX_angle = 2 * Math.PI * BOX_fraction;
 
         // Calculate BC and OC
-        console.log('Calculating BC & OC...');
         const BC = R / Math.sin(BOX_angle);
         const OC = R / Math.cos(BOX_angle);
 
         // Calculate XC
-        console.log('Calculating XC...');
         const XC = OC - R;
 
+        // Display the results
         // Display the results
         const resultsDiv = document.getElementById('results');
         console.log('Displaying results...');
