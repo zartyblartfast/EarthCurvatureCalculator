@@ -5,13 +5,15 @@ body {
   padding: 20px;
 }
 
-#calc-form {
+h1, form, #results {
   grid-column: 1;
-  width: 100%; /* add this line */
 }
 
-#results {
-  grid-column: 1;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
 }
 
 #diagram {
