@@ -18,9 +18,19 @@
     <!-- SVG Diagram -->
     <svg width="500" height="500">
         <g>
-            <path id="semi-circle" d="M 150 250 a 100 100 0 0 1 200 0" stroke="black" fill="transparent"></path>
-            <text id="textA" x="150" y="260">A</text>
-            <text id="textB" x="350" y="260">B</text>
+            <circle cx="250" cy="250" r="100" stroke="black" fill="transparent" />
+            <path d="M 250 150 Q 250 150, 270 160" stroke="black" stroke-dasharray="5,5" fill="transparent" />
+            <path d="M 250 150 Q 250 150, 230 160" stroke="black" stroke-dasharray="5,5" fill="transparent" />
+            <path d="M 250 150 Q 250 150, 290 170" stroke="black" stroke-dasharray="5,5" fill="transparent" />
+            <path d="M 230 160 L 230 140" stroke="black" fill="transparent" />
+            <path d="M 230 140 L 290 170" stroke="black" fill="transparent" />
+            <path d="M 290 170 L 290 190" stroke="black" fill="transparent" />
+            <text x="250" y="270">O</text>
+            <text x="230" y="160">A</text>
+            <text x="250" y="140">B</text>
+            <text x="290" y="170">C</text>
+            <text x="230" y="140">h1</text>
+            <text x="290" y="190">h2</text>
         </g>
     </svg>
 
