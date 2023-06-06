@@ -1,24 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 
-h1 {
-    color: #333;
+#calc-form {
+  grid-column: 1;
 }
 
-form {
-    margin-top: 20px;
+#results {
+  grid-column: 1;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-results {
-    width: 40%;
-}
-
-.diagram {
-    width: 55%;
+#diagram {
+  grid-column: 2;
 }
