@@ -42,6 +42,7 @@ window.onload = function() {
 
         // Calculate XC
         const XC = OC - R;
+        const d0 = d1 + BC
         
         // Display the results
         const resultsDiv = document.getElementById('results');
