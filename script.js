@@ -44,10 +44,10 @@ window.onload = function() {
         const resultsDiv = document.getElementById('results');
         console.log('Displaying results...');
         resultsDiv.innerHTML = `
-            <p>d1: ${d1} meters</p>
-            <p>d2: ${d2} meters</p>
-            <p>d0: ${d0} meters</p>
-            <p>h2: ${XC} meters</p>
+            <p>d1: ${d1.toFixed(1)} meters</p>
+            <p>d2: ${d2.toFixed(1)} meters</p>
+            <p>d0: ${d0.toFixed(1)} meters</p>
+            <p>h2: ${XC.toFixed(1)} meters</p>
         `;
     });
 };
