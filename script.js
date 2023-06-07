@@ -37,6 +37,15 @@ window.onload = function() {
         
         // Calculate the angle at BOX in radians
         const BOX_angle = 2 * Math.PI * BOX_fraction;
+        
+        // If BOX_angle >= 90, the OX radius will be parallel with the BC tangent and further calculations will error/overflow
+        if (BOX_angle >= Math.PI / 2) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <p>Error: Infinite, non-calculable result. Please adjust your h1 and/or L0 inputs.</p>
+            `;
+            return;
+        }
 
         // Calculate BC and OC
         
