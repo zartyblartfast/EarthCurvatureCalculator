@@ -7,6 +7,9 @@ window.onload = function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
+        const refractionFactor = parseFloat(document.querySelector("#refraction").value);
+        const R_prime = R * refractionFactor; // Adjusted Earth radius considering refraction
+
         const h1 = parseFloat(document.querySelector("#h1").value);
         const l0 = parseFloat(document.querySelector("#l0").value) * 1000;
 
