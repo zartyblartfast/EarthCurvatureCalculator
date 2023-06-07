@@ -18,6 +18,12 @@ form {
     overflow: auto; /* adds a scrollbar if the content overflows */
 }
 
+select {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
 .form-results {
     flex: 1; /* takes up remaining space */
     margin-right: 20px; /* adjust this value to your liking */
