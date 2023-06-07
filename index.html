@@ -12,8 +12,20 @@
             <form id="calc-form">
                 <label for="h1">h1 - Observer's height above sea level (meters):</label><br>
                 <input type="text" id="h1" name="h1"><br>
+		    
                 <label for="l0">L0 - Distance to remote object at X (km):</label><br>
                 <input type="text" id="l0" name="l0"><br>
+		    
+		<label for="refraction">Refraction Factor:</label>
+		  <select id="refraction" name="refraction">
+		    <option value="1">No Refraction</option>
+		    <option value="1.02">Low Refraction Conditions</option>
+		    <option value="1.04">Below Average Refraction</option>
+		    <option value="1.07" selected>Average Refraction</option>
+		    <option value="1.1">Above Average Refraction</option>
+		    <option value="1.15">High Refraction Conditions</option>
+		  </select>  
+		    
                 <input type="submit" value="Calculate">
             </form>
             <div id="results"></div>
