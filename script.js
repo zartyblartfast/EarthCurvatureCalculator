@@ -12,8 +12,10 @@ window.onload = function() {
 
         // Calculate d1 and d2
         const d1 = Math.sqrt(2 * h1 * R);
+        console.log("d1 = " + d1);
         //const d2 = l0 - d1;
         const l2 =  l0 - d1;
+        console.log("l2 = " + l2);
         
         // Check if d2 is negative
         if (l2 < 0) {
@@ -39,11 +41,16 @@ window.onload = function() {
         // Calculate BC and OC
         
         const OC = R / Math.cos(BOX_angle);
+        console.log("OC = " + OC);
         const BC = OC * Math.sin(BOX_angle);
+        console.log("BC = " + BC);
         
         // Calculate XC
         const XC = OC - R;
+        console.log("XC = " + XC);
         const d0 = d1 + BC
+        console.log("d0 = " + d0);
+     
         
         // Display the results
         const resultsDiv = document.getElementById('results');
