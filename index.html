@@ -10,14 +10,14 @@
     <div class="container">
         <div class="form-results">
             <form id="calc-form">
-                <label for="h1">h1 - Observer's height above sea level (meters):</label><br>
-                <input type="text" id="h1" name="h1"><br>
+                <label class="form-element" for="h1">h1 - Observer's height above sea level (meters):</label>
+                <input class="form-element" type="text" id="h1" name="h1">
 		    
-                <label for="l0">L0 - Distance to remote object at X (km):</label><br>
-                <input type="text" id="l0" name="l0"><br>
+                <label class="form-element" for="l0">L0 - Distance to remote object at X (km):</label>
+                <input class="form-element" type="text" id="l0" name="l0">
 		    
-		<label for="refraction">Refraction Factor:</label>
-		  <select id="refraction" name="refraction">
+		<label class="form-element" for="refraction">Refraction Factor:</label>
+		  <select class="form-element" id="refraction" name="refraction">
 		    <option value="1">No Refraction</option>
 		    <option value="1.02">Low Refraction Conditions</option>
 		    <option value="1.04">Below Average Refraction</option>
@@ -26,7 +26,7 @@
 		    <option value="1.15">High Refraction Conditions</option>
 		  </select>  
 		    
-                <input type="submit" value="Calculate">
+                <input class="form-element" type="submit" value="Calculate">
             </form>
             <div id="results"></div>
         </div>
