@@ -74,10 +74,10 @@ window.onload = function() {
         const resultsDiv = document.getElementById('results');
         console.log('Displaying results...');
         resultsDiv.innerHTML = `
-            <p>d1: ${(d1 / 1000).toFixed(1)} kilometers</p>
-            <p>d2: ${(BC / 1000).toFixed(3)} kilometers</p>
-            <p>d0: ${(d0 / 1000).toFixed(3)} kilometers</p>
-            <p>h2: ${(XC / 1000).toFixed(1)} kilometers</p>
+            <p>d1: ${(d1 / 1000).toFixed(1)} km</p>
+            <p>d2: ${(BC / 1000).toFixed(3)} km</p>
+            <p>d0: ${(d0 / 1000).toFixed(3)} km</p>
+            <p>h2: ${(XC / 1000).toFixed(1)} km</p>
         `;
     });
 };
