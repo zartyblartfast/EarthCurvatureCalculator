@@ -29,6 +29,11 @@ select {
     margin-right: 20px; /* adjust this value to your liking */
 }
 
+.form-element {
+    display: block;
+    margin-bottom: 10px;
+}
+
 .diagram {
     display: flex;
     justify-content: center;
