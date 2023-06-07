@@ -18,13 +18,13 @@ window.onload = function() {
         console.log("l2 = " + l2);
         
         // Check if d2 is negative
-        if (l2 < 0) {
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `
-                <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
-            `;
-            return;
-        }
+        //if (l2 < 0) {
+        //    const resultsDiv = document.getElementById('results');
+        //    resultsDiv.innerHTML = `
+        //        <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
+        //    `;
+        //    return;
+        //}
 
         // If d2 is not negative, continue with the calculations
         //const d0 = d1 + d2;
@@ -53,6 +53,15 @@ window.onload = function() {
         console.log("OC = " + OC);
         const BC = OC * Math.sin(BOX_angle);
         console.log("BC = " + BC);
+        
+        // Check if BC goes negative
+        if (BC <= 0) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <p>Error: The total distance (L0) must be greater than the observer's distance to the horizon (d1).</p>
+            `;
+            return;
+        }
         
         // Calculate XC
         const XC = OC - R;
