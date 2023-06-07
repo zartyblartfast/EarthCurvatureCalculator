@@ -9,6 +9,21 @@ window.onload = function() {
 
         const h1 = parseFloat(document.querySelector("#h1").value);
         const l0 = parseFloat(document.querySelector("#l0").value) * 1000;
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const h1 = parseFloat(document.querySelector("#h1").value);
+            const l0 = parseFloat(document.querySelector("#l0").value) * 1000;
+
+            // Check if either input field is empty
+            if (document.querySelector("#h1").value === "" || document.querySelector("#l0").value === "") {
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = `
+                    <p>Error: Please make sure both h1 and L0 fields are filled.</p>
+                `;
+                return;
+            }
 
         // Calculate d1 and l2
         const d1 = Math.sqrt(2 * h1 * R);
