@@ -1,6 +1,6 @@
 window.onload = function() {
-    const R = 6371000; // Earth radius in meters
-    const C = 2 * Math.PI * R; // Earth's circumference in meters
+    let R = 6371000; // Earth radius in meters
+    //const C = 2 * Math.PI * R; // Earth's circumference in meters
 
     const form = document.getElementById('calc-form');
 
@@ -10,6 +10,7 @@ window.onload = function() {
         const refractionFactor = parseFloat(document.querySelector("#refraction").value);
         //const R_prime = R * refractionFactor; // Adjusted Earth radius considering refraction
         const R = R * refractionFactor; // Adjusted Earth radius considering refraction
+        const C = 2 * Math.PI * R; // Earth's circumference in meters
         const h1 = parseFloat(document.querySelector("#h1").value);
         const l0 = parseFloat(document.querySelector("#l0").value) * 1000;
 
