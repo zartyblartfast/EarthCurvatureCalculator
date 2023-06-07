@@ -20,8 +20,7 @@ window.onload = function() {
             if (document.querySelector("#h1").value === "" || document.querySelector("#l0").value === "") {
                 const resultsDiv = document.getElementById('results');
                 resultsDiv.innerHTML = `
-                    <p>Error: Please make sure both h1 and L0 fields are filled.</p>
-                `;
+                    <p>Error: Please make sure both h1 and L0 fields are filled.</p>;
                 return;
             }
 
