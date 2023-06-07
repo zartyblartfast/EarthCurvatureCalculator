@@ -9,32 +9,23 @@ window.onload = function() {
 
         const h1 = parseFloat(document.querySelector("#h1").value);
         const l0 = parseFloat(document.querySelector("#l0").value) * 1000;
-        
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
 
-            const h1 = parseFloat(document.querySelector("#h1").value);
-            const l0 = parseFloat(document.querySelector("#l0").value) * 1000;
-
-            // Check if either input field is empty
-            if (document.querySelector("#h1").value === "" || document.querySelector("#l0").value === "") {
-                const resultsDiv = document.getElementById('results');
-                resultsDiv.innerHTML = `
-                    <p>Error: Please make sure both h1 and L0 fields are filled.</p>;
-                return;
-            }
+        // Check if either input field is empty
+        if (document.querySelector("#h1").value === "" || document.querySelector("#l0").value === "") {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <p>Error: Please make sure both h1 and L0 fields are filled.</p>
+            `;
+            return;
+        }
 
         // Calculate d1 and l2
         const d1 = Math.sqrt(2 * h1 * R);
         console.log("d1 = " + d1);
-        //const d2 = l0 - d1;
         const l2 =  l0 - d1;
         console.log("l2 = " + l2);
         
-        //const BOX_fraction = d2 / C;
         const BOX_fraction = l2 / C;
-        
-        // Calculate the angle at BOX in radians
         const BOX_angle = 2 * Math.PI * BOX_fraction;
         
         // If BOX_angle >= 90, the OX radius will be parallel with the BC tangent and further calculations will error/overflow
@@ -60,7 +51,7 @@ window.onload = function() {
             `;
             return;
         }
-        
+
         // Calculate XC
         const XC = OC - R;
         console.log("XC = " + XC);
